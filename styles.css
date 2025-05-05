@@ -127,6 +127,7 @@ body {
     overflow: visible;
     position: relative;
     overflow-y: scroll;
+    overflow-x: hidden;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
 }

@@ -12,101 +12,325 @@
 
 <body>
 <div id="overlay"></div>
-<nav class="mobile-menu" id="mobileMenu">
+<!--MENU A COMPARSA-->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Side navigation menu" aria-hidden="false">
     <div class="mobile-header">
         <div class="logo-search">
             <img src="img/logo.png" alt="USA TODAY" class="logo-img" style="height: 45px"/>
-            <button id="closeMenu" aria-label="Close Menu">
+            <button id="closeMenu" aria-label="Close side menu" aria-controls="side menu" aria-expanded="true">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                     <polygon id="path-1" points="12 10.5857864 6.70710678 5.29289322 5.29289322 6.70710678 10.5857864 12 5.29289322 17.2928932 6.70710678 18.7071068 12 13.4142136 17.2928932 18.7071068 18.7071068 17.2928932 13.4142136 12 18.7071068 6.70710678 17.2928932 5.29289322 12 10.5857864"></polygon>
                 </svg>
             </button>
         </div>
-        <div class="search-box">
-            <input type="text" aria-label="Search" id="searchInput" placeholder="What do you want to find?" />
-            <div class="search-btn">
+        <div class="search-box" role="search" aria-label="Search within site">
+            <input type="text" aria-label="Search articles" id="searchInput" placeholder="What do you want to find?" />
+            <div class="search-btn" aria-label="Search button" role="button" tabindex="0">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                     <path d="M15.7489008,14.3346872 L20.7071068,19.2928932 L19.2928932,20.7071068 L14.3346872,15.7489008 C13.2597335,16.5355664 11.9341039,17 10.5,17 C6.91014913,17 4,14.0898509 4,10.5 C4,6.91014913 6.91014913,4 10.5,4 C14.0898509,4 17,6.91014913 17,10.5 C17,11.9341039 16.5355664,13.2597335 15.7489008,14.3346872 Z M10.5,15 C12.9852814,15 15,12.9852814 15,10.5 C15,8.01471863 12.9852814,6 10.5,6 C8.01471863,6 6,8.01471863 6,10.5 C6,12.9852814 8.01471863,15 10.5,15 Z" id="path-1"></path>
                 </svg>
             </div>
         </div>
     </div>
-    <div class="mobile-scroll-content" id="menuContent">
-        <ul class="menu-list">
-            <li class="menu-item">
-                <a>U.S.</a>
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                </svg>
-            </li>
-            <li class="menu-item">
-                <a>Politics</a>
-            </li>
-            <li class="menu-item" style="--bar-color: #f03c4b">
-                <a>Sports</a>
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                </svg>
-            </li>
-            <li class="menu-item" style="--bar-color: #aa50e6">
-                <a>Entertainment</a>
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                </svg>
-            </li>
-            <li class="menu-item" style="--bar-color: #aa50e6">
-                <a>Life</a>
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                </svg>
-            </li>
-            <li class="menu-item" style="--bar-color: #3cc37d">
-                <a>Money</a>
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                </svg>
-            </li>
-            <li class="menu-item" style="--bar-color: #fa9632">
-                <a>Tech</a>
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                </svg>
-            </li>
-            <li class="menu-item" style="--bar-color: #19c8d2">
-                <a>Travel</a>
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                </svg>
-            </li>
-            <li class="menu-item" style="--bar-color: #7e7bf2">
-                <a>Opinion</a>
-                <svg width="24" height="24" viewBox="0 0 24 24" >
-                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                </svg>
-            </li>
-            <li class="menu-item">
-                <a>Crossword</a>
-            </li>
-        </ul>
+    <div class="scroll-menu-news" id="menuContent" role="region" aria-label="Scrollable category menu">
+        <div class="scroll-menu-news-container">
+            <div class="container">
+                <nav class="scroll-menu" role="navigation" aria-label="News categories">
+                    <ul class="main-menu-list">
+                        <li class="main-menu-item">
+                            <div class="menu">
+                                <a href="#" aria-label="U.S. news category" aria-expanded="false" aria-controls="submenu-us">U.S.</a>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                                </svg>
 
-        <div class="recent-stories">
-            <h4>Most Recent Stories</h4>
-            <div class="story">
-                <a href="#" style="text-decoration: none;">
-                    <h5>Movies</h5>
-                    <p>'The Accountant 3'? Ben Affleck reveals vision for a final film</p>
-                </a>
+                            </div>
+                            <ul class="submenu inner" id="submenu-us"  aria-label="U.S. submenu" aria-hidden="true">
+                                <li style="margin-top: 0"><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu-item">
+                            <div class="menu">
+                                <a href="#" aria-label="Politics news category" aria-expanded="false" aria-controls="submenu-politics">Politics</a>
+                            </div>
+                        </li>
+                        <li class="main-menu-item" style="--bar-color: #f03c4b">
+                            <div class="menu">
+                                <a href="#">Sports</a>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                                </svg>
+                            </div>
+                            <ul class="submenu inner" id="submenu-sports"  aria-label="Sports submenu" aria-hidden="true">
+                                <li style="margin-top: 0"><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu-item" style="--bar-color: #aa50e6">
+                            <div class="menu">
+                                <a href="#" aria-label="Entertainment news category" aria-expanded="false" aria-controls="submenu-entertainment">Entertainment</a>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                                </svg>
+                            </div>
+                            <ul class="submenu inner" id="submenu-entertainment"  aria-label="Entertainment submenu" aria-hidden="true">
+                                <li style="margin-top: 0"><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu-item" style="--bar-color: #aa50e6">
+                            <div class="menu">
+                                <a href="#" aria-label="Life news category" aria-expanded="false" aria-controls="submenu-life">Life</a>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                                </svg>
+                            </div>
+                            <ul class="submenu inner" id="submenu-life"  aria-label="Life submenu" aria-hidden="true">
+                                <li style="margin-top: 0"><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu-item" style="--bar-color: #3cc37d">
+                            <div class="menu">
+                                <a href="#" aria-label="Money news category" aria-expanded="false" aria-controls="submenu-money">Money</a>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                                </svg>
+                            </div>
+                            <ul class="submenu inner" id="submenu-money"  aria-label="Money submenu" aria-hidden="true">
+                                <li style="margin-top: 0"><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu-item" style="--bar-color: #fa9632">
+                            <div class="menu">
+                                <a href="#" aria-label="Tech news category" aria-expanded="false" aria-controls="submenu-tech">Tech</a>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                                </svg>
+                            </div>
+                            <ul class="submenu inner" id="submenu-tech"  aria-label="Tech submenu" aria-hidden="true">
+                                <li style="margin-top: 0"><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu-item" style="--bar-color: #19c8d2">
+                            <div class="menu">
+                                <a href="#" aria-label="Travel news category" aria-expanded="false" aria-controls="submenu-travel">Travel</a>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                                </svg>
+                            </div>
+                            <ul class="submenu inner" id="submenu-travel"  aria-label="Travel submenu" aria-hidden="true">
+                                <li style="margin-top: 0"><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu-item" style="--bar-color: #7e7bf2">
+                            <div class="menu">
+                                <a href="#" aria-label="Opinion news category" aria-expanded="false" aria-controls="submenu-opinion">Opinion</a>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <polygon points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                                </svg>
+                            </div>
+                            <ul class="submenu inner" id="submenu-opinion"  aria-label="Opinion submenu" aria-hidden="true">
+                                <li style="margin-top: 0"><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                                <li><a href="#"> Lorem ipsum </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="recent-stories" role="complementary" aria-label="Recent stories">
+                    <h4>Most Recent Stories</h4>
+                    <div class="recent-story">
+                        <a href="#" aria-label="Article about The Accountant 3" style="text-decoration: none;">
+                            <h5>Movies</h5>
+                            <p>'The Accountant 3'? Ben Affleck reveals vision for a final film</p>
+                        </a>
+                    </div>
+                    <div class="recent-story">
+                        <a href="#" aria-label="Article about The Accountant 3" style="text-decoration: none;">
+                            <h5>Movies</h5>
+                            <p>'The Accountant 3'? Ben Affleck reveals vision for a final film</p>
+                        </a>
+                    </div>
+                    <div class="recent-story">
+                        <a href="#" aria-label="Article about The Accountant 3" style="text-decoration: none;">
+                            <h5>Movies</h5>
+                            <p>'The Accountant 3'? Ben Affleck reveals vision for a final film</p>
+                        </a>
+                    </div>
+                    <div class="recent-story">
+                        <a href="#" aria-label="Article about The Accountant 3" style="text-decoration: none;">
+                            <h5>Movies</h5>
+                            <p>'The Accountant 3'? Ben Affleck reveals vision for a final film</p>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <!-- puoi aggiungerne altri -->
         </div>
     </div>
 </nav>
+<!--FINE MENU A COMPARSA-->
 <div id="page-content">
 <!-- Sticky module -->
-<util-sticky-module>
+<util-sticky-module aria-label="Sticky header with main navigation" role="banner">
     <div class = "logo-container">
         <div class="icons">
-            <button class="hamburger-btn" id="hamburger" aria-label="Menu">
+            <button class="hamburger-btn" id="hamburger" aria-label="Open main menu" aria-controls="mobileMenu" aria-expanded="false">
                 <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M3,13 L3,11 L21,11 L21,13 L3,13 Z
                             M3,7 L3,5 L21,5 L21,7 L3,7 Z
@@ -114,58 +338,55 @@
                 </svg>
             </button>
         </div>
-        <!--MENU A COMPARSA FIXME-->
-
-        <!--FINE MENU A COMPARSA-->
         <div class="logo">
-            <a href="#">
-                <img src="img/logo.png" alt="USA TODAY" />
+            <a href="#" aria-label="Go to USA TODAY homepage">
+                <img src="img/logo.png" alt="USA TODAY logo" />
             </a>
         </div>
     </div>
-    <ul class="nav-links">
+    <ul class="nav-links" aria-label="Primary navigation links">
         <li>
-        <a href="#">Home</a>
+        <a href="#" aria-label="Go to Home page">Home</a>
         </li>
         <li>
-        <a href="#">U.S.</a>
+        <a href="#" aria-label="Go to U.S. news">U.S.</a>
         </li>
         <li>
-        <a href="#">Politics</a>
+        <a href="#" aria-label="Go to Politics news">Politics</a>
         </li>
         <li>
-        <a href="#">Sports</a>
+        <a href="#" aria-label="Go to Sports news">Sports</a>
         </li>
         <li>
-        <a href="#">Entertainment</a>
+        <a href="#" aria-label="Go to Entertainment news">Entertainment</a>
         </li>
         <li>
-        <a href="#">Life</a>
+        <a href="#" aria-label="Go to Life news">Life</a>
         </li>
         <li>
-        <a href="#">Money</a>
+        <a href="#" aria-label="Go to Money news">Money</a>
         </li>
         <li>
-        <a href="#">Tech</a>
+        <a href="#" aria-label="Go to Tech news">Tech</a>
         </li>
         <li>
-        <a href="#">Travel</a>
+        <a href="#" aria-label="Go to Travel news">Travel</a>
         </li>
         <li>
-        <a href="#">Opinion</a>
+        <a href="#" aria-label="Go to Opinion news">Opinion</a>
         </li>
         <li>
-        <a href="#">Crossword</a>
+        <a href="#" aria-label="Go to Crossword news">Crossword</a>
         </li>
     </ul>
 </util-sticky-module>
 
-<header>
+<header aria-label="Main news highlights">
     <div class="header-container">
-        <div class="header-principal">
+        <div class="header-principal" role="region" aria-label="Featured article">
             <div class="header-content">
-                <a href="#">
-                    <img src="img/prova-notizia-principale-header.webp" alt=""/>
+                <a href="#" aria-label="Main article: Could Trump transform D.C.'s African American history museum?">
+                    <img src="img/prova-notizia-principale-header.webp" alt="Main article thumbnail"/>
                     <div class="header-text">
                         <h1>Could Trump transform D.C.'s African American history museum?</h1>
                     </div>
@@ -174,53 +395,49 @@
                     <p>President Trump targets museums he said push divisive ideology. Activists and historians say he's trying to erase the nation's tarnished history.</p>
                 </div>
             </div>
-            <div class="secondary-slot">
-                <a class="slot-container">
-                    <img src="img/260x146.svg" alt=""/>
+            <div class="secondary-slot" role="region" aria-label="Secondary featured articles">
+                <a class="slot-container" href="#" aria-label="Secondary article: Could Trump transform D.C.'s African American history museum?">
+                    <img src="img/260x146.svg" alt="Secondary article thumbnail"/>
                     <p>Could Trump transform D.C.'s African American history museum?</p>
                 </a>
-                <a class="slot-container">
-                    <img src="img/260x146.svg" alt=""/>
+                <a class="slot-container" href="#" aria-label="Secondary article: A warning, then missiles: Israel strikes Gaza hospital">
+                    <img src="img/260x146.svg" alt="Secondary article thumbnail"/>
                     <p>A warning, then missiles: Israel strikes Gaza hospital</p>
                 </a>
             </div>
         </div>
-        <div class="stories">
-            <a class="stories-container">
+        <div class="stories" role="region" aria-label="Additional news stories">
+            <a class="stories-container" href="#" aria-label="Story: 2025 NFL draft running back class could be one of the deepest ever">
                 <h1>2025 NFL draft running back class could be one of the deepest ever</h1>
                 <div class=" type-time">
                     <h2>NFL Draft</h2>
-                    <p>|</p>
-                    <p>4 hours ago</p>
+                    <h3>4 hours ago</h3>
                 </div>
             </a>
-            <a class="stories-container">
+            <a class="stories-container" href="#" aria-label="Story: 2025 NFL draft running back class could be one of the deepest ever">
                 <h1>2025 NFL draft running back class could be one of the deepest ever</h1>
                 <div class=" type-time">
                     <h2>NFL Draft</h2>
-                    <p>|</p>
-                    <p>4 hours ago</p>
+                    <h3>4 hours ago</h3>
                 </div>
             </a>
-            <a class="stories-container">
+            <a class="stories-container" href="#" aria-label="Story: 2025 NFL draft running back class could be one of the deepest ever">
                 <h1>2025 NFL draft running back class could be one of the deepest ever</h1>
                 <div class=" type-time">
                     <h2>NFL Draft</h2>
-                    <p>|</p>
-                    <p>4 hours ago</p>
+                    <h3>4 hours ago</h3>
                 </div>
             </a>
-            <div class="stories-container">
+            <a class="stories-container" href="#" aria-label="Story: 2025 NFL draft running back class could be one of the deepest ever">
                 <h1>2025 NFL draft running back class could be one of the deepest ever</h1>
                 <div class=" type-time">
                     <h2>NFL Draft</h2>
-                    <p>|</p>
-                    <p>4 hours ago</p>
+                    <h3>4 hours ago</h3>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
-    <div style="background-color: #f8f8f8">
+    <div style="background-color: #f8f8f8" aria-label="Advertisement">
         <div class="advertisement-container">
             <div class="header-advertisement">
                 <div>
@@ -233,783 +450,1334 @@
 
 <!-- Hero Section -->
 <main>
-<div class="hero">
-    <section class="secondary">
-        <div class="poster-scroll">
-            <div class="feedback">
-                <a href="#" class="cta-box">
-                    <h3>
-                        <span class="emphasis">Share your feedback</span> to help improve our site!
-                    </h3>
-                    <div class="icon">
-                        <svg height="24px" width="24px" viewBox="0 0 24 24">
-                            <polygon id="path-1" points="17.0857864 13 3 13 3 11 17.0857864 11 13.7928932 7.70710678 15.2071068 6.29289322 20.9142136 12 15.2071068 17.7071068 13.7928932 16.2928932 17.0857864 13"></polygon>
-                        </svg>
+    <div class="hero">
+        <section class="secondary" aria-label="advertisement">
+            <div class="poster-scroll" aria-label="Feedback and partner advertisements">
+                <div class="feedback" aria-label="User feedback section">
+                    <a href="#" class="cta-box" aria-label="Share your feedback to help improve our site">
+                        <h3>
+                            <span class="emphasis">Share your feedback</span> to help improve our site!
+                        </h3>
+                        <div class="icon">
+                            <svg height="24px" width="24px" viewBox="0 0 24 24">
+                                <polygon id="path-1" points="17.0857864 13 3 13 3 11 17.0857864 11 13.7928932 7.70710678 15.2071068 6.29289322 20.9142136 12 15.2071068 17.7071068 13.7928932 16.2928932 17.0857864 13"></polygon>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="partner-poster" aria-label="Advertisement banner">
+                    <div class="partner-poster-adv">
+                        <p>Advertisement</p>
+                        <img src="img/473x266.svg" alt="Advertisement image one"/>
+                    </div>
+                </div>
+                <div class="partner-poster" aria-label="Advertisement banner" style="height: 1050px; margin-top: 24px">
+                    <div class="partner-poster-adv">
+                        <p>Advertisement</p>
+                        <img src="img/473x266.svg" alt="Advertisement image two"/>
+                    </div>
+                </div>
+                <div class="partner-poster" aria-label="Advertisement banner" style="height: 1050px; margin-top: 24px">
+                    <div class="partner-poster-adv">
+                        <p>Advertisement</p>
+                        <img src="img/473x266.svg" alt="Advertisement image three"/>
+                    </div>
+                </div>
+                <div class="partner-poster" aria-label="Advertisement banner" style="height: 1050px; margin-top: 24px">
+                    <div class="partner-poster-adv">
+                        <p>Advertisement</p>
+                        <img src="img/473x266.svg" alt="Advertisement image four"/>
+                    </div>
+                </div>
+                <div class="partner-poster" aria-label="Advertisement banner" style="height: 1050px; margin-top: 24px">
+                    <div class="partner-poster-adv">
+                        <p>Advertisement</p>
+                        <img src="img/473x266.svg" alt="Advertisement image five"/>
+                    </div>
+                </div>
+                <div class="partner-poster-final" aria-label="Advertisement banner">
+                    <div class="partner-poster-adv">
+                        <p>Advertisement</p>
+                        <img src="img/473x266.svg" alt="Advertisement image six" style="height:600px"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="primary" aria-label="news section">
+            <div class="section-stories" aria-label="Top stories">
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                        <h2>NFl Draft</h2>
+                        <h3>4 hours ago</h3>
+                    </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
                     </div>
                 </a>
-            </div>
-            <div class="partner-poster">
-                <div class="partner-poster-adv">
-                    <p>Advertisement</p>
-                    <img src="img/473x266.svg" alt=""/>
-                </div>
-            </div>
-            <div class="partner-poster" style="height: 1050px; margin-top: 24px">
-                <div class="partner-poster-adv">
-                    <p>Advertisement</p>
-                    <img src="img/473x266.svg" alt=""/>
-                </div>
-            </div>
-            <div class="partner-poster" style="height: 1050px; margin-top: 24px">
-                <div class="partner-poster-adv">
-                    <p>Advertisement</p>
-                    <img src="img/473x266.svg" alt=""/>
-                </div>
-            </div>
-            <div class="partner-poster" style="height: 1050px; margin-top: 24px">
-                <div class="partner-poster-adv">
-                    <p>Advertisement</p>
-                    <img src="img/473x266.svg" alt=""/>
-                </div>
-            </div>
-            <div class="partner-poster" style="height: 1050px; margin-top: 24px">
-                <div class="partner-poster-adv">
-                    <p>Advertisement</p>
-                    <img src="img/473x266.svg" alt=""/>
-                </div>
-            </div>
-            <div class="partner-poster-final">
-                <div class="partner-poster-adv">
-                    <p>Advertisement</p>
-                    <img src="img/473x266.svg" alt="" style="height:600px"/>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="primary">
-        <div class="section-stories">
-            <!--<div class="division-categories">-->
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                    <h2>NFL Draft</h2>
-                    <p>4 hours ago</p>
-                </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <div class="stories-advertisement">
-                <div>
-                    <p>Advertisement</p>
-                </div>
-            </div>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <div class="stories-advertisement">
-                <div>
-                    <p>Advertisement</p>
-                </div>
-            </div>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <a class="story">
-                <div class="story-title">
-                    <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
-                    <div class="type-time">
-                        <h2>NFL Draft</h2>
-                        <p>4 hours ago</p>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="img/187x105.svg" alt=""/>
-                </div>
-            </a>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1> News</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <img src="img/473x266.svg" alt=""/>
-                        <div class="news-principal-title">
-                            <h1>DeChambeau: McIlroy 'didn't talk to me once.' Playoff was different ffsdsd dsgadfs ahbashbcha  HBCJbabjbajbcjzb n cjsabvjabb</h1>
-                            <div class="news-principal-subtitle">
-                            <h2>Masters</h2>
-                            <h2>|</h2>
-                            <h3>1 hour ago</h3>
-                            </div>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
                         </div>
                     </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
                         </div>
                     </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <div class="stories-advertisement" aria-label="Advertisement banner">
+                    <div>
+                        <p>Advertisement</p>
+                    </div>
+                </div>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <div class="stories-advertisement" aria-label="Advertisement banner">
+                    <div>
+                        <p>Advertisement</p>
+                    </div>
+                </div>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <a class="story" href="#" aria-label="Read story: SNL mocks Trump tariffs reversal">
+                    <div class="story-title">
+                        <h1>'SNL' mocks Trump tariffs reversal, spoofs 'The White Lotus' Season 3</h1>
+                        <div class="type-time">
+                            <h2>NFL Draft</h2>
+                            <h3>4 hours ago</h3>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/187x105.svg" alt=""/>
+                    </div>
+                </a>
+                <div class="block-notices" aria-label="News category">
+                    <a href="#" class="notice-container-type" aria-label="Open News category page">
+                        <h1> News</h1>
                         <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
                         </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1 class="red"> Sports</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <div class="news-principal-img">
-                            <img src="img/473x266.svg" alt=""/>
-                        </div>
-                        <div class="news-principal-title">
-                            <h2>Mike Budenholzer out as Suns coach</h2>
-                            <div class="news-principal-subtitle">
-                                <h1>Masters</h1>
-                                <h2>|</h2>
-                                <h3>1 hour ago</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <h1>News</h1>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <h1>News2</h1>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <h1>News3</h1>
-                        </div>
-                    </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
-                        <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1 class="purple"> Entertainment</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <div class="news-principal-img">
-                            <img src="img/473x266.svg" alt=""/>
-                        </div>
-                        <div class="news-principal-title">
-                            <h1>DeChambeau: McIlroy 'didn't talk to me once.' Playoff was different ffsdsd dsgadfs ahbashbcha  HBCJbabjbajbcjzb n cjsabvjabb</h1>
-                            <div class="news-principal-subtitle">
-                                <h2>Masters</h2>
-                                <h2>|</h2>
-                                <h3>1 hour ago</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
-                        <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1 class="purple"> Life</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <div class="news-principal-img">
-                            <img src="img/473x266.svg" alt=""/>
-                        </div>
-                        <div class="news-principal-title">
-                            <h1>DeChambeau: McIlroy 'didn't talk to me once.' Playoff was different ffsdsd dsgadfs ahbashbcha  HBCJbabjbajbcjzb n cjsabvjabb</h1>
-                            <div class="news-principal-subtitle">
-                                <h2>Masters</h2>
-                                <h2>|</h2>
-                                <h3>1 hour ago</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
-                        <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1 class="green"> Money</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <img src="img/473x266.svg" alt=""/>
-                        <div class="news-principal-title">
-                            <h1>DeChambeau: McIlroy 'didn't talk to me once.' Playoff was different ffsdsd dsgadfs ahbashbcha  HBCJbabjbajbcjzb n cjsabvjabb</h1>
-                            <div class="news-principal-subtitle">
-                                <h2>Masters</h2>
-                                <h2>|</h2>
-                                <h3>1 hour ago</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
+                    </a>
+                    <div class="news" role="list" aria-label="News articles list">
+                        <a href="#" class="news-principal" aria-label="Main news article">
                             <div class="news-principal-img">
                                 <img src="img/473x266.svg" alt=""/>
                             </div>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
                             </div>
+                        </a>
+                        <div class="three-news" role="group" aria-label="Secondary news articles">
+                            <a href="#" class="news-secondary" aria-label="Secondary news article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" aria-label="Secondary news article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" aria-label="Secondary news article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
                         </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
+                        <div class="show-more" aria-label="Expandable news section">
+                            <input type="checkbox" id="toggle-news-1" hidden>
+                            <input type="checkbox" id="toggle-news-2" hidden>
+                            <input type="checkbox" id="toggle-reset-1" hidden>
+                            <div class="three-news-two" aria-hidden="true" id="news-extra-1">
+                                <a href="#" class="news-secondary" aria-label="Secondary news article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" aria-label="Secondary news article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" aria-label="Secondary news article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
                             </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
+                            <div class="three-news-three" aria-hidden="true" id="news-extra-2">
+                                <a href="#" class="news-secondary" aria-label="Secondary news article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" aria-label="Secondary news article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" aria-label="Secondary news article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
                             </div>
+                            <label for="toggle-news-1" class="show-more-click" aria-controls="news-extra-1 news-extra-2">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-2" class="show-more-click" aria-controls="news-extra-1 news-extra-2">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-1" class="show-more-click" aria-controls="news-extra-1 news-extra-2">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
                         </div>
                     </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
+                </div>
+                <div class="block-notices" aria-label="Sports category">
+                    <a href="#" class="notice-container-type" aria-label="Open Sports category page">
+                        <h1 class="red"> Sports</h1>
                         <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
                         </svg>
+                    </a>
+                    <div class="news" role="list" aria-label="Sports articles list">
+                        <a href="#" class="news-principal" aria-label="Main sports article">
+                            <div class="news-principal-img">
+                                <img src="img/473x266.svg" alt=""/>
+                            </div>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit.</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="three-news" role="group" aria-label="Secondary sports section">
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary sports article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary sports article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary sports article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more" aria-label="Expandable sports section">
+                            <input type="checkbox" id="toggle-news-3" hidden>
+                            <input type="checkbox" id="toggle-news-4" hidden>
+                            <input type="checkbox" id="toggle-reset-2" hidden>
+                            <div class="three-news-two" aria-hidden="true" id="news-extra-3">
+                                <a href="#" class="news-secondary" aria-label="Secondary sports article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" aria-label="Secondary sports article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" aria-label="Secondary sports article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="three-news-three" aria-hidden="true" id="news-extra-4">
+                                <a href="#" class="news-secondary" aria-label="Secondary sports article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" aria-label="Secondary sports article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" aria-label="Secondary sports article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <label for="toggle-news-3" class="show-more-click" aria-controls="news-extra-3 news-extra-4">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-4" class="show-more-click" aria-controls="news-extra-3 news-extra-4">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-2" class="show-more-click" aria-controls="news-extra-3 news-extra-4">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1 class="orange"> Tech</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <div class="news-principal-img">
-                            <img src="img/473x266.svg" alt=""/>
-                        </div>
-                        <div class="news-principal-title">
-                            <h1>DeChambeau: McIlroy 'didn't talk to me once.' Playoff was different ffsdsd dsgadfs ahbashbcha  HBCJbabjbajbcjzb n cjsabvjabb</h1>
-                            <div class="news-principal-subtitle">
-                                <h2>Masters</h2>
-                                <h2>|</h2>
-                                <h3>1 hour ago</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
+                <div class="block-notices" aria-label="Entertainment category">
+                    <a href="#" class="notice-container-type" aria-label="Open Entertainment category page">
+                        <h1 class="purple"> Entertainment</h1>
                         <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
                         </svg>
+                    </a>
+                    <div class="news" role="list" aria-label="Entertainment articles list">
+                        <a href="#" class="news-principal" role="listitem" aria-label="Main entertainment article">
+                            <div class="news-principal-img">
+                                <img src="img/473x266.svg" alt=""/>
+                            </div>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="three-news" role="group" aria-label="Secondary entertainment articles">
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary entertainment article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary entertainment article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary entertainment article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more" aria-label="Expandable entertainment section">
+                            <input type="checkbox" id="toggle-news-5" hidden>
+                            <input type="checkbox" id="toggle-news-6" hidden>
+                            <input type="checkbox" id="toggle-reset-3" hidden>
+                            <div class="three-news-two" id="news-extra-5">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary entertainment article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary entertainment article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary entertainment article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="three-news-three" id="news-extra-6">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary entertainment article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary entertainment article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary entertainment article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <label for="toggle-news-5" class="show-more-click" aria-controls="news-extra-5 news-extra-6">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-6" class="show-more-click" aria-controls="news-extra-5 news-extra-6">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-3" class="show-more-click" aria-controls="news-extra-5 news-extra-6">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1 class="acquamarina"> Travel</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <div class="news-principal-img">
-                            <img src="img/473x266.svg" alt=""/>
-                        </div>
-                        <div class="news-principal-title">
-                            <h1>DeChambeau: McIlroy 'didn't talk to me once.' Playoff was different ffsdsd dsgadfs ahbashbcha  HBCJbabjbajbcjzb n cjsabvjabb</h1>
-                            <div class="news-principal-subtitle">
-                                <h2>Masters</h2>
-                                <h2>|</h2>
-                                <h3>1 hour ago</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
+                <div class="block-notices" aria-label="Life category">
+                    <a href="#" class="notice-container-type" aria-label="Open Life category section">
+                        <h1 class="purple"> Life</h1>
                         <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
                         </svg>
+                    </a>
+                    <div class="news" role="list" aria-label="News articles list">
+                        <a href="#" class="news-principal" role="listitem" aria-label="Main life article">
+                            <div class="news-principal-img">
+                                <img src="img/473x266.svg" alt=""/>
+                            </div>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="three-news" role="group" aria-label="Secondary life articles">
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary life article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary life article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary life article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more" aria-label="Expandable life section">
+                            <input type="checkbox" id="toggle-news-7" hidden>
+                            <input type="checkbox" id="toggle-news-8" hidden>
+                            <input type="checkbox" id="toggle-reset-4" hidden>
+                            <div class="three-news-two" id="news-extra-7">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary life article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary life article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary life article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="three-news-three" id="news-extra-8">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary life article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary life article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary life article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <label for="toggle-news-7" class="show-more-click" aria-controls="news-extra-7 news-extra-8">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-8" class="show-more-click" aria-controls="news-extra-7 news-extra-8">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-4" class="show-more-click" aria-controls="news-extra-7 news-extra-8">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1 class="lilla"> Opinion</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <div class="news-principal-img">
-                            <img src="img/473x266.svg" alt=""/>
-                        </div>
-                        <div class="news-principal-title">
-                            <h1>DeChambeau: McIlroy 'didn't talk to me once.' Playoff was different ffsdsd dsgadfs ahbashbcha  HBCJbabjbajbcjzb n cjsabvjabb</h1>
-                            <div class="news-principal-subtitle">
-                                <h2>Masters</h2>
-                                <h2>|</h2>
-                                <h3>1 hour ago</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
+                <div class="block-notices" aria-label="Money category">
+                    <a href="#" class="notice-container-type" aria-label="Open Money category page">
+                        <h1 class="green"> Money</h1>
                         <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
                         </svg>
+                    </a>
+                    <div class="news" role="list" aria-label="Money articles list">
+                        <a href="#" class="news-principal" role="listitem" aria-label="Main news article">
+                            <div class="news-principal-img">
+                                <img src="img/473x266.svg" alt=""/>
+                            </div>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="three-news" role="group" aria-label="Secondary money articles">
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary money article">
+                                <img src="img/473x266.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary money article">
+                                <img src="img/473x266.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary money article">
+                                <img src="img/473x266.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more" aria-label="Expandable money section">
+                            <input type="checkbox" id="toggle-news-9" hidden>
+                            <input type="checkbox" id="toggle-news-10" hidden>
+                            <input type="checkbox" id="toggle-reset-5" hidden>
+                            <div class="three-news-two" id="news-extra-9">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary money article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary money article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary money article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="three-news-three" id="news-extra-10">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary money article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary money article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary money article">
+                                    <img src="img/473x266.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <label for="toggle-news-9" class="show-more-click" aria-controls="news-extra-9 news-extra-10">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-10" class="show-more-click" aria-controls="news-extra-9 news-extra-10">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-5" class="show-more-click" aria-controls="news-extra-9 news-extra-10">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1>Most Recent Videos</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <div class="news-principal-img">
-                            <img src="img/473x266.svg" alt=""/>
-                        </div>
-                        <div class="news-principal-title">
-                            <h1>DeChambeau: McIlroy 'didn't talk to me once.' Playoff was different ffsdsd dsgadfs ahbashbcha  HBCJbabjbajbcjzb n cjsabvjabb</h1>
-                            <div class="news-principal-subtitle">
-                                <h2>Masters</h2>
-                                <h2>|</h2>
-                                <h3>1 hour ago</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
+                <div class="block-notices" aria-label="Tech category">
+                    <a href="#" class="notice-container-type" aria-label="Open Tech category page">
+                        <h1 class="orange"> Tech</h1>
                         <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
                         </svg>
+                    </a>
+                    <div class="news" role="list" aria-label="Tech articles list">
+                        <a href="#" class="news-principal" role="listitem" aria-label="Main tech article">
+                            <div class="news-principal-img">
+                                <img src="img/473x266.svg" alt=""/>
+                            </div>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="three-news" role="group" aria-label="Secondary tech articles">
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary tech article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary tech article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary tech article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more" aria-label="Expandable tech section">
+                            <input type="checkbox" id="toggle-news-11" hidden>
+                            <input type="checkbox" id="toggle-news-12" hidden>
+                            <input type="checkbox" id="toggle-reset-6" hidden>
+                            <div class="three-news-two" id="news-extra-11">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary tech article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary tech article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary tech article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="three-news-three" id="news-extra-12">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary tech article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary tech article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary tech article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <label for="toggle-news-11" class="show-more-click" aria-controls="news-extra-11 news-extra-12">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-12" class="show-more-click" aria-controls="news-extra-11 news-extra-12">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-6" class="show-more-click" aria-controls="news-extra-11 news-extra-12">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="block-notices">
-                <div class="notice-container-type">
-                    <h1> Most Recent Galleries</h1>
-                    <svg class="more">
-                        <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
-                    </svg>
-                </div>
-                <div class="news">
-                    <div class="news-principal">
-                        <div class="news-principal-img">
-                            <img src="img/473x266.svg" alt=""/>
-                        </div>
-                        <div class="news-principal-title">
-                            <h1>DeChambeau: McIlroy 'didn't talk to me once.' Playoff was different ffsdsd dsgadfs ahbashbcha  HBCJbabjbajbcjzb n cjsabvjabb</h1>
-                            <div class="news-principal-subtitle">
-                                <h2>Masters</h2>
-                                <h2>|</h2>
-                                <h3>1 hour ago</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three-news">
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                        <div class="news-secondary">
-                            <img src="img/223x125.svg" alt=""/>
-                            <div class="news-secondary-title">
-                                <h1>News</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more">
-                        <h1>Show more </h1>
-                        <h2>News</h2>
+                <div class="block-notices" aria-label="Travel category">
+                    <a href="#" class="notice-container-type" aria-label="Open Travel category page">
+                        <h1 class="acquamarina"> Travel</h1>
                         <svg class="more">
-                            <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
                         </svg>
+                    </a>
+                    <div class="news" role="list" aria-label="Travel articles list">
+                        <a href="#" class="news-principal" role="listitem" aria-label="Main travel article">
+                            <div class="news-principal-img">
+                                <img src="img/473x266.svg" alt=""/>
+                            </div>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="three-news" role="group" aria-label="Secondary travel articles">
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary travel article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary travel article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary travel article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more" aria-label="Expandable travel section">
+                            <input type="checkbox" id="toggle-news-13" hidden>
+                            <input type="checkbox" id="toggle-news-14" hidden>
+                            <input type="checkbox" id="toggle-reset-7" hidden>
+                            <div class="three-news-two" id="news-extra-13">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary travel article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary travel article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary travel article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="three-news-three" id="news-extra-14">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary travel article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary travel article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary travel article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <label for="toggle-news-13" class="show-more-click" aria-controls="news-extra-13 news-extra-14">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-14" class="show-more-click" aria-controls="news-extra-13 news-extra-14">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-7" class="show-more-click" aria-controls="news-extra-13 news-extra-14">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-notices" aria-label="Opinion category">
+                    <a href="#" class="notice-container-type" aria-label="Open Opinion category page">
+                        <h1 class="lilla"> Opinion</h1>
+                        <svg class="more">
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                        </svg>
+                    </a>
+                    <div class="news" role="list" aria-label="Opinion articles list">
+                        <a href="#" class="news-principal" role="listitem" aria-label="Main opinion article">
+                            <div class="news-principal-img">
+                                <img src="img/473x266.svg" alt=""/>
+                            </div>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="three-news" role="group" aria-label="Secondary opinion articles">
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary opinion article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary opinion article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary opinion article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more" aria-label="Expandable opinion section">
+                            <input type="checkbox" id="toggle-news-15" hidden>
+                            <input type="checkbox" id="toggle-news-16" hidden>
+                            <input type="checkbox" id="toggle-reset-8" hidden>
+                            <div class="three-news-two" id="news-extra-15">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary opinion article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary opinion article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary opinion article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="three-news-three" id="news-extra-16">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary opinion article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary opinion article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary opinion article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <label for="toggle-news-15" class="show-more-click" aria-controls="news-extra-15 news-extra-16">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-16" class="show-more-click" aria-controls="news-extra-15 news-extra-16">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-8" class="show-more-click" aria-controls="news-extra-15 news-extra-16">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-notices" aria-label="Most Recent Videos category">
+                    <a href="#" class="notice-container-type" aria-label="Open Most Recent Videos category page">
+                        <h1>Most Recent Videos</h1>
+                        <svg class="more">
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                        </svg>
+                    </a>
+                    <div class="news" role="list" aria-label="Most Recent Videos articles list">
+                        <a href="#" class="news-principal" role="listitem" aria-label="Main Most Recent Videos article">
+                            <div class="news-principal-img">
+                                <img src="img/473x266.svg" alt=""/>
+                            </div>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="three-news" role="group" aria-label="Secondary Most Recent Videos articles">
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Videos article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Videos article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Videos article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more" aria-label="Expandable Most Recent Videos section">
+                            <input type="checkbox" id="toggle-news-17" hidden>
+                            <input type="checkbox" id="toggle-news-18" hidden>
+                            <input type="checkbox" id="toggle-reset-9" hidden>
+                            <div class="three-news-two" id="news-extra-17">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Videos article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Videos article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Videos article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="three-news-three" id="news-extra-18">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Videos article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Videos article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Videos article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <label for="toggle-news-17" class="show-more-click" aria-controls="news-extra-17 news-extra-18">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-18" class="show-more-click" aria-controls="news-extra-17 news-extra-18">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-9" class="show-more-click" aria-controls="news-extra-17 news-extra-18">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-notices" aria-label="Most Recent Galleries category">
+                    <a href="#" class="notice-container-type" aria-label="Open Most Recent Galleries category page">
+                        <h1> Most Recent Galleries</h1>
+                        <svg class="more">
+                            <polygon id="path-1" points="9.23177872 17.3598156 10.7682213 18.6401844 16.3017083 12 10.7682213 5.3598156 9.23177872 6.6401844 13.6982917 12"></polygon>
+                        </svg>
+                    </a>
+                    <div class="news" aria-label="Most Recent Galleries articles list">
+                        <a href="#" class="news-principal" role="listitem" aria-label="Main Most Recent Galleries article">
+                            <div class="news-principal-img">
+                                <img src="img/473x266.svg" alt=""/>
+                            </div>
+                            <div class="news-principal-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae</h1>
+                                <div class="news-principal-subtitle">
+                                    <h2>Masters</h2>
+                                    <h3>1 hour ago</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="three-news" aria-label="Secondary Most Recent Galleries articles">
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Galleries article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Galleries article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                            <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Galleries article">
+                                <img src="img/223x125.svg" alt=""/>
+                                <div class="news-secondary-title">
+                                    <h1>News</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more" aria-label="Expandable Most Recent Galleries section">
+                            <input type="checkbox" id="toggle-news-19" hidden>
+                            <input type="checkbox" id="toggle-news-20" hidden>
+                            <input type="checkbox" id="toggle-reset-10" hidden>
+                            <div class="three-news-two" id="news-extra-19">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Galleries article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Galleries article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Galleries article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="three-news-three" id="news-extra-20">
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Galleries article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Galleries article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                                <a href="#" class="news-secondary" role="listitem" aria-label="Secondary Most Recent Galleries article">
+                                    <img src="img/223x125.svg" alt=""/>
+                                    <div class="news-secondary-title">
+                                        <h1>News</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <label for="toggle-news-19" class="show-more-click" aria-controls="news-extra-19 news-extra-20">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-news-20" class="show-more-click" aria-controls="news-extra-19 news-extra-20">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                            <label for="toggle-reset-10" class="show-more-click" aria-controls="news-extra-19 news-extra-20">
+                                <span class="title">Show more </span>
+                                <span class="title2">News</span>
+                                <svg class="more">
+                                    <polygon id="path-1" points="12 12.662045 8.16436384 9.25259068 6.83563616 10.7474093 12 15.337955 17.1643638 10.7474093 15.8356362 9.25259068"></polygon>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--</div>-->
+                <div class="ad" aria-label="Sponsored content">
+                    <div class="ad-container" aria-label="Ad by Remail">
+                        <img src="img/134x134.svg" alt=""/>
+                        <div class="company-ad">
+                            <p>Remail</p>
+                            <a href="#" aria-label="Read more: Quanto costa trasformare la vasca in doccia?">Quanto costa trasformare la vasca in doccia?</a>
+                        </div>
+                    </div>
+                    <div class="ad-space-line"></div>
+                    <div class="ad-container" aria-label="Ad by Ariel Energia">
+                        <img src="img/134x134.svg" alt=""/>
+                        <div class="company-ad">
+                            <p>Ariel Energia</p>
+                            <a href="#" aria-label="Read more: Fuori tutto Ariel climatizzatori: prendi 2 paghi 1">Fuori tutto Ariel climatizzatori: prendi 2 paghi 1</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--</div>-->
-            <div class="ad">
-                <div class="ad-container">
-                    <img src="img/134x134.svg" alt=""/>
-                    <div class="company-ad">
-                        <p>Remail</p>
-                        <a href="#">Quanto costa trasformare la vasca in doccia?</a>
-                    </div>
-                </div>
-                <div class="ad-space-line">
-                </div>
-                <div class="ad-container">
-                    <img src="img/134x134.svg" alt=""/>
-                    <div class="company-ad">
-                        <p>Ariel Energia</p>
-                        <a href="#">Fuori tutto Ariel climatizzatori: prendi 2 paghi 1</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 </main>
-<!-- Main Content -->
-<!-- Hero Section
-<section class="hero">
-    <img src="https://via.placeholder.com/1000x500" alt="Main News" />
-    <div class="hero-text">
-        <h1>Main Headline Article Title Goes Here</h1>
-        <p class="author">By Jane Reporter | April 9, 2025</p>
-        <p class="summary">
-            This is a short summary of the main article. It introduces the story and
-            captures the reader's attention.
-        </p>
-    </div>
-</section>
--->
 
-
-<!-- Articles Section
-<section class="articles">
-    <div class="card">
-        <img src="https://via.placeholder.com/400x200" alt="Article 1" />
-        <div class="card-text">
-            <span class="category">Tech</span>
-            <h2>Article Title One</h2>
-            <p>Quick summary of the article content in a few lines.</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="https://via.placeholder.com/400x200" alt="Article 2" />
-        <div class="card-text">
-            <span class="category">Sports</span>
-            <h2>Article Title Two</h2>
-            <p>Quick summary of the article content in a few lines.</p>
-        </div>
-    </div>
-</section>
--->
 <!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-adv">
+<footer class="footer" role="contentinfo" aria-label="Website footer">
+    <div class="footer-adv" aria-label="Advertisement section">
         <p>Advertisement</p>
-        <img src="img/francesco.svg" alt=""/>
+        <a href="#" aria-label="Advertisement image link"><img src="img/223x125.svg" alt="ad"/></a>
     </div>
     <div class="footer-container">
-        <div class="footer-links">
-            <a href="#">Help</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Subscription Term & Conditions</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Site Map</a>
-            <a href="#">Accessibility</a>
-            <a href="#">Our Ethical Principles</a>
-            <a href="#">Responsible Disclosure</a>
-            <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="12" fill="none" class="ypc-icon"><path fill="#1366FF" d="M19.07 0H5.93A5.93 5.93 0 0 0 0 5.93v.115a5.93 5.93 0 0 0 5.93 5.93h13.14A5.93 5.93 0 0 0 25 6.044v-.116A5.93 5.93 0 0 0 19.07 0Z"></path><path fill="#fff" d="M6.061 1.022a4.89 4.89 0 0 0-4.875 4.876v.14a4.89 4.89 0 0 0 4.875 4.876h5.298c.03 0 .056-.02.063-.05l2.67-9.758a.065.065 0 0 0-.062-.083H6.062Z"></path><path fill="#1366FF" d="M6.694 8.673a.527.527 0 0 1-.37-.151L4.358 6.584a.527.527 0 1 1 .74-.75l1.56 1.537 3.25-3.846a.527.527 0 0 1 .805.68L7.096 8.486a.528.528 0 0 1-.38.187h-.023Z"></path><path fill="#fff" d="m21.008 7.928-1.924-1.96 1.862-1.896a.527.527 0 1 0-.751-.739l-1.849 1.883-1.849-1.883a.527.527 0 1 0-.751.739l1.862 1.896-1.924 1.96a.527.527 0 1 0 .752.738l1.91-1.946 1.911 1.946a.525.525 0 0 0 .745.007.527.527 0 0 0 .007-.745h-.001Z"></path></svg>
+        <div class="footer-links" role="navigation" aria-label="Footer navigation links">
+            <a href="#" aria-label="Help page">Help</a>
+            <a href="#" aria-label="Terms of Service page">Terms of Service</a>
+            <a href="#" aria-label="Subscription Terms and Conditions">Subscription Term & Conditions</a>
+            <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+            <a href="#" aria-label="Site Map">Site Map</a>
+            <a href="#" aria-label="Accessibility Information">Accessibility</a>
+            <a href="#" aria-label="Our Ethical Principles">Our Ethical Principles</a>
+            <a href="#" aria-label="Responsible Disclosure">Responsible Disclosure</a>
+            <a href="#" aria-label="Your Privacy Choices">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="12" fill="none"><path fill="#1366FF" d="M19.07 0H5.93A5.93 5.93 0 0 0 0 5.93v.115a5.93 5.93 0 0 0 5.93 5.93h13.14A5.93 5.93 0 0 0 25 6.044v-.116A5.93 5.93 0 0 0 19.07 0Z"></path><path fill="#fff" d="M6.061 1.022a4.89 4.89 0 0 0-4.875 4.876v.14a4.89 4.89 0 0 0 4.875 4.876h5.298c.03 0 .056-.02.063-.05l2.67-9.758a.065.065 0 0 0-.062-.083H6.062Z"></path><path fill="#1366FF" d="M6.694 8.673a.527.527 0 0 1-.37-.151L4.358 6.584a.527.527 0 1 1 .74-.75l1.56 1.537 3.25-3.846a.527.527 0 0 1 .805.68L7.096 8.486a.528.528 0 0 1-.38.187h-.023Z"></path><path fill="#fff" d="m21.008 7.928-1.924-1.96 1.862-1.896a.527.527 0 1 0-.751-.739l-1.849 1.883-1.849-1.883a.527.527 0 1 0-.751.739l1.862 1.896-1.924 1.96a.527.527 0 1 0 .752.738l1.91-1.946 1.911 1.946a.525.525 0 0 0 .745.007.527.527 0 0 0 .007-.745h-.001Z"></path></svg>
                 Your Privacy Choices
             </a>
         </div>
-        <div class="icon-social">
-            <a href="#" aria-label="Facebook"><svg><path d="M12.6143832,21 L3.99346182,21 C3.44462725,21 3,20.5550968 3,20.006476 L3,3.99345411 C3,3.44469364 3.44469709,3 3.99346182,3 L20.006608,3 C20.5552331,3 21,3.44469364 21,3.99345411 L21,20.006476 C21,20.5551667 20.5551632,21 20.006608,21 L15.4197395,21 L15.4197395,14.029408 L17.7594454,14.029408 L18.1097832,11.3128446 L15.4197395,11.3128446 L15.4197395,9.57849053 C15.4197395,8.79198274 15.6381418,8.25600363 16.7659836,8.25600363 L18.2044917,8.25537504 L18.2044917,5.82565895 C17.9557072,5.79255313 17.1017938,5.71858885 16.108332,5.71858885 C14.0343128,5.71858885 12.6143832,6.98457234 12.6143832,9.30945332 L12.6143832,11.3128446 L10.2686707,11.3128446 L10.2686707,14.029408 L12.6143832,14.029408 L12.6143832,21 L12.6143832,21 Z" fill="#3b5998"></path></svg></a>
-            <a href="#" aria-label="Twitter"><svg><path d="M21,6.77573131 C20.338616,7.07692308 19.6265188,7.28060672 18.8795563,7.3716143 C19.6423666,6.9035753 20.2276809,6.16143012 20.5034337,5.27735645 C19.7892235,5.71072589 19,6.02600217 18.1568938,6.19501625 C17.4849445,5.45937161 16.5245642,5 15.461701,5 C13.4236661,5 11.770206,6.69555796 11.770206,8.78656555 C11.770206,9.08342362 11.8019017,9.3716143 11.8652932,9.64897075 C8.79609086,9.4907909 6.07554147,7.98483207 4.25303751,5.69122427 C3.93502377,6.2524377 3.75330164,6.9035753 3.75330164,7.59696641 C3.75330164,8.91007584 4.40517697,10.0693391 5.39619651,10.7486457 C4.79186476,10.7302275 4.22134179,10.5579632 3.72266244,10.276273 L3.72266244,10.3228602 C3.72266244,12.1581798 4.9957739,13.6890574 6.68621236,14.035753 C6.37665082,14.1245937 6.05018489,14.1690141 5.71315372,14.1690141 C5.47543582,14.1690141 5.24300053,14.1462622 5.01796091,14.1018418 C5.4881141,15.6056338 6.85103011,16.7009751 8.46751189,16.7302275 C7.20390914,17.7464789 5.61067089,18.3521127 3.88114105,18.3521127 C3.58320127,18.3521127 3.28843106,18.3347779 3,18.3001083 C4.63444268,19.3726977 6.57633386,20 8.66085578,20 C15.4543053,20 19.1679873,14.2307692 19.1679873,9.22643554 C19.1679873,9.06175515 19.1648177,8.89707476 19.1584786,8.73564464 C19.8800845,8.20151679 20.5066033,7.53521127 21,6.77573131" fill="#009BFF"></path></svg></a>
-            <a href="#" aria-label="Snapchat"><svg><path d="M12.17307,4 L12.172277,4 C12.1567432,4 12.1421424,4 12.1282414,4.00018743 C12.017406,4.00131199 11.8351993,4.00309255 11.8188259,4.00327998 C11.41924,4.00327998 10.6197418,4.05997679 9.76095411,4.44073571 C9.26993839,4.65829215 8.82827614,4.95245957 8.44828241,5.31508488 C7.99523808,5.74715207 7.62615995,6.27986781 7.35149716,6.89865962 C6.94925238,7.80468403 7.04474062,9.33076539 7.12142975,10.5571502 L7.12170964,10.5590714 C7.12991967,10.6904112 7.13854953,10.8275612 7.14643302,10.961197 C7.08742344,10.9884208 6.99174861,11.0171441 6.85073203,11.0171441 C6.62383668,11.0171441 6.35402527,10.9442817 6.0489947,10.8007122 C5.95924415,10.7587285 5.85680538,10.7375023 5.74377754,10.7375023 C5.56217729,10.7375023 5.37073434,10.7912003 5.20466784,10.8892717 C4.99573193,11.0125053 4.86073293,11.1866723 4.82406769,11.3797694 C4.79990408,11.5075012 4.80107027,11.759966 5.08025791,12.015992 C5.23382278,12.1569374 5.45941198,12.2869184 5.75058813,12.4025143 C5.82699738,12.432737 5.91768088,12.4616008 6.01372889,12.4921983 C6.34702809,12.5986103 6.8514784,12.7593762 6.98302545,13.0703652 C7.04968529,13.2280386 7.02099684,13.4355208 6.89798635,13.6862988 C6.89476764,13.6931399 6.89154894,13.6998404 6.88861012,13.7068689 C6.85786916,13.7789817 6.57107791,14.4315104 5.98280134,15.1196972 C5.64852254,15.5110458 5.28033072,15.8381068 4.8890482,16.092071 C4.41146708,16.4021229 3.89470172,16.6048257 3.35325963,16.694416 C3.14063854,16.729465 2.98879965,16.9197507 3.00064821,17.1359952 C3.00428675,17.1983148 3.01884089,17.260447 3.0440774,17.3205644 C3.04426399,17.3209392 3.04449723,17.3213141 3.04468382,17.3216421 C3.13065589,17.523642 3.32998233,17.6952319 3.65404524,17.8465796 C4.0500392,18.0313362 4.64228085,18.1867605 5.41416353,18.308354 C5.45316117,18.3828564 5.49365154,18.5700965 5.52168692,18.6982969 C5.55102845,18.8345567 5.58162946,18.9746587 5.62524524,19.1234761 C5.67231297,19.2847106 5.7943905,19.477386 6.10800428,19.477386 C6.22686311,19.477386 6.36354144,19.4504902 6.52181774,19.4196584 C6.75361112,19.3739729 7.07058355,19.3116533 7.46620433,19.3116533 C7.68554272,19.3116533 7.9128579,19.331052 8.14166581,19.3692404 C8.58272164,19.4429931 8.96294861,19.712795 9.40288488,20.0252366 C10.0468124,20.4824659 10.7756857,21 11.8893109,21 C11.9196786,21 11.9501397,20.999016 11.9802276,20.9969074 C12.0170328,20.9986412 12.0626544,21 12.1107951,21 C13.2247467,21 13.9534335,20.4822785 14.5966613,20.025424 L14.5976875,20.0244868 C15.0377171,19.7124201 15.4175242,19.4429931 15.8584401,19.3692404 C16.0871547,19.3310989 16.3144233,19.3116533 16.5338549,19.3116533 C16.9117962,19.3116533 17.2110424,19.3600564 17.4782415,19.4123956 C17.6526113,19.4468822 17.7881235,19.4634696 17.8921016,19.4634696 L17.9022709,19.463657 L17.9128133,19.463657 C18.142181,19.463657 18.3107198,19.3371903 18.3750473,19.1158853 C18.4177767,18.9702073 18.4482845,18.8333852 18.4783723,18.6948295 C18.5045885,18.5746885 18.5464783,18.3821067 18.5854759,18.3068078 C19.3578717,18.1849799 19.9498801,18.0298837 20.3459207,17.8451739 C20.6692373,17.694529 20.8683305,17.5231266 20.9548157,17.3219701 C20.9807519,17.2616653 20.9959125,17.1991582 20.9993178,17.1355266 C21.0114929,16.919657 20.8594207,16.7289964 20.6466597,16.6939475 C18.2403281,16.2955704 17.1562778,13.8119689 17.1114491,13.7064472 C17.108557,13.6995124 17.1052916,13.6926245 17.1018863,13.6859239 C16.9788758,13.4350522 16.9504673,13.2278043 17.0171738,13.0698498 C17.1484409,12.7591419 17.6525647,12.598376 17.9860971,12.4920109 C18.0826583,12.4614602 18.1736683,12.432409 18.2494711,12.4023269 C18.5778257,12.2720648 18.8125112,12.1307444 18.9673356,11.9702597 C19.1522478,11.7789431 19.18826,11.595639 19.1860209,11.4756854 C19.1803765,11.185454 18.9594987,10.9275538 18.6081468,10.8012745 C18.4894745,10.7519811 18.354149,10.7259755 18.2163511,10.7259755 C18.1225422,10.7259755 17.9836248,10.738908 17.8521244,10.8005717 C17.5706044,10.9328955 17.3184258,11.0052425 17.101933,11.015551 C16.986806,11.0096939 16.9060585,10.9846254 16.8537662,10.9606816 C16.8603435,10.8474754 16.8676206,10.7311766 16.8751309,10.6099111 L16.8782563,10.5579936 C16.9553653,9.33081225 17.0511801,7.80355947 16.6487487,6.89687906 C16.3729197,6.27588497 16.0025354,5.74181038 15.5476718,5.30880606 C15.1661854,4.94594647 14.7230304,4.6518259 14.2302421,4.43441003 C13.3726672,4.05646253 12.5732156,4 12.17307,4" fill="#fff" stroke="#000"></path></svg></a>
-            <a href="#" aria-label="Instagram"><img src="img/icon-instagram_24.webp" alt="Instagram"/></a>
-            <a href="#" aria-label="Linkedin"><svg><path d="M19.668463,3 C20.4024834,3 21,3.581 21,4.298 L21,19.701 C21,20.418 20.4024834,21 19.668463,21 L4.32753688,21 C3.59501653,21 3,20.418 3,19.701 L3,4.298 C3,3.581 3.59501653,3 4.32753688,3 L19.668463,3 Z M7.00411123,5.478 C6.14658741,5.478 5.4550682,6.1715 5.4550682,7.026 C5.4550682,7.881 6.14658741,8.5745 7.00411123,8.5745 C7.85813495,8.5745 8.5511542,7.881 8.5511542,7.026 C8.5511542,6.1715 7.85813495,5.478 7.00411123,5.478 Z M5.66707409,18.338 L8.33964832,18.338 L8.33964832,9.748 L5.66707409,9.748 L5.66707409,18.338 Z M10.0141948,9.748 L10.0141948,18.338 L12.6807689,18.338 L12.6807689,14.0895 C12.6807689,12.9685 12.8927748,11.883 14.2823134,11.883 C15.6523515,11.883 15.6693519,13.1645 15.6693519,14.1605 L15.6693519,18.338 L18.3389261,18.338 L18.3389261,13.627 C18.3389261,11.3135 17.8394122,9.535 15.1358371,9.535 C13.837301,9.535 12.9662768,10.247 12.610267,10.9225 L12.5732659,10.9225 L12.5732659,9.748 L10.0141948,9.748 Z" fill="#007bb5"></path></svg></a>
-            <a href="#" aria-label="Pinterest"><svg><path d="M12.0005292,3 C7.03034045,3 3,7.02928206 3,12.0005292 C3,15.6847769 5.21626389,18.8514729 8.3882519,20.2432528 C8.36285059,19.6156289 8.38401835,18.85994 8.54383489,18.1762216 C8.71741048,17.445934 9.70171106,13.2727112 9.70171106,13.2727112 C9.70171106,13.2727112 9.41488799,12.6980067 9.41488799,11.8481214 C9.41488799,10.5145528 10.1885694,9.51860998 11.1506439,9.51860998 C11.9687776,9.51860998 12.3646146,10.1335333 12.3646146,10.8701711 C12.3646146,11.6925384 11.8396543,12.9234433 11.5697654,14.0633269 C11.3443288,15.019051 12.0481566,15.796966 12.9901217,15.796966 C14.6951843,15.796966 15.843535,13.6071618 15.843535,11.0119951 C15.843535,9.04021873 14.5152584,7.56376786 12.0989593,7.56376786 C9.36937732,7.56376786 7.66854824,9.59904745 7.66854824,11.8724643 C7.66854824,12.657788 7.89927677,13.2102664 8.26124537,13.637855 C8.42847063,13.8357735 8.45069677,13.9140942 8.39036867,14.1405892 C8.34803316,14.3046393 8.24854472,14.7047098 8.2072676,14.8624096 C8.1469395,15.089963 7.96278003,15.1725172 7.75745281,15.0878462 C6.49902981,14.5745281 5.9137414,13.1975657 5.9137414,11.6491445 C5.9137414,9.09313812 8.06967719,6.0259305 12.3455636,6.0259305 C15.7821485,6.0259305 18.0439231,8.51420004 18.0439231,11.1823955 C18.0439231,14.7131769 16.0816723,17.3506791 13.1869818,17.3506791 C12.2164403,17.3506791 11.3019933,16.8257188 10.9887105,16.2298465 C10.9887105,16.2298465 10.465867,18.3032281 10.3557947,18.7032986 C10.1652849,19.3965426 9.79167402,20.0908449 9.44981478,20.6306227 C10.2594814,20.8698183 11.1146587,21 12.0005292,21 C16.9707179,21 21,16.9707179 21,12.0005292 C21,7.02928206 16.9707179,3 12.0005292,3" fill="#c92228"></path></svg></a>
+        <div class="icon-social" role="navigation" aria-label="Social media links">
+            <a href="#" aria-label="Follow us on Facebook"><svg><path d="M12.6143832,21 L3.99346182,21 C3.44462725,21 3,20.5550968 3,20.006476 L3,3.99345411 C3,3.44469364 3.44469709,3 3.99346182,3 L20.006608,3 C20.5552331,3 21,3.44469364 21,3.99345411 L21,20.006476 C21,20.5551667 20.5551632,21 20.006608,21 L15.4197395,21 L15.4197395,14.029408 L17.7594454,14.029408 L18.1097832,11.3128446 L15.4197395,11.3128446 L15.4197395,9.57849053 C15.4197395,8.79198274 15.6381418,8.25600363 16.7659836,8.25600363 L18.2044917,8.25537504 L18.2044917,5.82565895 C17.9557072,5.79255313 17.1017938,5.71858885 16.108332,5.71858885 C14.0343128,5.71858885 12.6143832,6.98457234 12.6143832,9.30945332 L12.6143832,11.3128446 L10.2686707,11.3128446 L10.2686707,14.029408 L12.6143832,14.029408 L12.6143832,21 L12.6143832,21 Z" fill="#3b5998"></path></svg></a>
+            <a href="#" aria-label="Follow us on Twitter"><svg><path d="M21,6.77573131 C20.338616,7.07692308 19.6265188,7.28060672 18.8795563,7.3716143 C19.6423666,6.9035753 20.2276809,6.16143012 20.5034337,5.27735645 C19.7892235,5.71072589 19,6.02600217 18.1568938,6.19501625 C17.4849445,5.45937161 16.5245642,5 15.461701,5 C13.4236661,5 11.770206,6.69555796 11.770206,8.78656555 C11.770206,9.08342362 11.8019017,9.3716143 11.8652932,9.64897075 C8.79609086,9.4907909 6.07554147,7.98483207 4.25303751,5.69122427 C3.93502377,6.2524377 3.75330164,6.9035753 3.75330164,7.59696641 C3.75330164,8.91007584 4.40517697,10.0693391 5.39619651,10.7486457 C4.79186476,10.7302275 4.22134179,10.5579632 3.72266244,10.276273 L3.72266244,10.3228602 C3.72266244,12.1581798 4.9957739,13.6890574 6.68621236,14.035753 C6.37665082,14.1245937 6.05018489,14.1690141 5.71315372,14.1690141 C5.47543582,14.1690141 5.24300053,14.1462622 5.01796091,14.1018418 C5.4881141,15.6056338 6.85103011,16.7009751 8.46751189,16.7302275 C7.20390914,17.7464789 5.61067089,18.3521127 3.88114105,18.3521127 C3.58320127,18.3521127 3.28843106,18.3347779 3,18.3001083 C4.63444268,19.3726977 6.57633386,20 8.66085578,20 C15.4543053,20 19.1679873,14.2307692 19.1679873,9.22643554 C19.1679873,9.06175515 19.1648177,8.89707476 19.1584786,8.73564464 C19.8800845,8.20151679 20.5066033,7.53521127 21,6.77573131" fill="#009BFF"></path></svg></a>
+            <a href="#" aria-label="Follow us on Snapchat"><svg><path d="M12.17307,4 L12.172277,4 C12.1567432,4 12.1421424,4 12.1282414,4.00018743 C12.017406,4.00131199 11.8351993,4.00309255 11.8188259,4.00327998 C11.41924,4.00327998 10.6197418,4.05997679 9.76095411,4.44073571 C9.26993839,4.65829215 8.82827614,4.95245957 8.44828241,5.31508488 C7.99523808,5.74715207 7.62615995,6.27986781 7.35149716,6.89865962 C6.94925238,7.80468403 7.04474062,9.33076539 7.12142975,10.5571502 L7.12170964,10.5590714 C7.12991967,10.6904112 7.13854953,10.8275612 7.14643302,10.961197 C7.08742344,10.9884208 6.99174861,11.0171441 6.85073203,11.0171441 C6.62383668,11.0171441 6.35402527,10.9442817 6.0489947,10.8007122 C5.95924415,10.7587285 5.85680538,10.7375023 5.74377754,10.7375023 C5.56217729,10.7375023 5.37073434,10.7912003 5.20466784,10.8892717 C4.99573193,11.0125053 4.86073293,11.1866723 4.82406769,11.3797694 C4.79990408,11.5075012 4.80107027,11.759966 5.08025791,12.015992 C5.23382278,12.1569374 5.45941198,12.2869184 5.75058813,12.4025143 C5.82699738,12.432737 5.91768088,12.4616008 6.01372889,12.4921983 C6.34702809,12.5986103 6.8514784,12.7593762 6.98302545,13.0703652 C7.04968529,13.2280386 7.02099684,13.4355208 6.89798635,13.6862988 C6.89476764,13.6931399 6.89154894,13.6998404 6.88861012,13.7068689 C6.85786916,13.7789817 6.57107791,14.4315104 5.98280134,15.1196972 C5.64852254,15.5110458 5.28033072,15.8381068 4.8890482,16.092071 C4.41146708,16.4021229 3.89470172,16.6048257 3.35325963,16.694416 C3.14063854,16.729465 2.98879965,16.9197507 3.00064821,17.1359952 C3.00428675,17.1983148 3.01884089,17.260447 3.0440774,17.3205644 C3.04426399,17.3209392 3.04449723,17.3213141 3.04468382,17.3216421 C3.13065589,17.523642 3.32998233,17.6952319 3.65404524,17.8465796 C4.0500392,18.0313362 4.64228085,18.1867605 5.41416353,18.308354 C5.45316117,18.3828564 5.49365154,18.5700965 5.52168692,18.6982969 C5.55102845,18.8345567 5.58162946,18.9746587 5.62524524,19.1234761 C5.67231297,19.2847106 5.7943905,19.477386 6.10800428,19.477386 C6.22686311,19.477386 6.36354144,19.4504902 6.52181774,19.4196584 C6.75361112,19.3739729 7.07058355,19.3116533 7.46620433,19.3116533 C7.68554272,19.3116533 7.9128579,19.331052 8.14166581,19.3692404 C8.58272164,19.4429931 8.96294861,19.712795 9.40288488,20.0252366 C10.0468124,20.4824659 10.7756857,21 11.8893109,21 C11.9196786,21 11.9501397,20.999016 11.9802276,20.9969074 C12.0170328,20.9986412 12.0626544,21 12.1107951,21 C13.2247467,21 13.9534335,20.4822785 14.5966613,20.025424 L14.5976875,20.0244868 C15.0377171,19.7124201 15.4175242,19.4429931 15.8584401,19.3692404 C16.0871547,19.3310989 16.3144233,19.3116533 16.5338549,19.3116533 C16.9117962,19.3116533 17.2110424,19.3600564 17.4782415,19.4123956 C17.6526113,19.4468822 17.7881235,19.4634696 17.8921016,19.4634696 L17.9022709,19.463657 L17.9128133,19.463657 C18.142181,19.463657 18.3107198,19.3371903 18.3750473,19.1158853 C18.4177767,18.9702073 18.4482845,18.8333852 18.4783723,18.6948295 C18.5045885,18.5746885 18.5464783,18.3821067 18.5854759,18.3068078 C19.3578717,18.1849799 19.9498801,18.0298837 20.3459207,17.8451739 C20.6692373,17.694529 20.8683305,17.5231266 20.9548157,17.3219701 C20.9807519,17.2616653 20.9959125,17.1991582 20.9993178,17.1355266 C21.0114929,16.919657 20.8594207,16.7289964 20.6466597,16.6939475 C18.2403281,16.2955704 17.1562778,13.8119689 17.1114491,13.7064472 C17.108557,13.6995124 17.1052916,13.6926245 17.1018863,13.6859239 C16.9788758,13.4350522 16.9504673,13.2278043 17.0171738,13.0698498 C17.1484409,12.7591419 17.6525647,12.598376 17.9860971,12.4920109 C18.0826583,12.4614602 18.1736683,12.432409 18.2494711,12.4023269 C18.5778257,12.2720648 18.8125112,12.1307444 18.9673356,11.9702597 C19.1522478,11.7789431 19.18826,11.595639 19.1860209,11.4756854 C19.1803765,11.185454 18.9594987,10.9275538 18.6081468,10.8012745 C18.4894745,10.7519811 18.354149,10.7259755 18.2163511,10.7259755 C18.1225422,10.7259755 17.9836248,10.738908 17.8521244,10.8005717 C17.5706044,10.9328955 17.3184258,11.0052425 17.101933,11.015551 C16.986806,11.0096939 16.9060585,10.9846254 16.8537662,10.9606816 C16.8603435,10.8474754 16.8676206,10.7311766 16.8751309,10.6099111 L16.8782563,10.5579936 C16.9553653,9.33081225 17.0511801,7.80355947 16.6487487,6.89687906 C16.3729197,6.27588497 16.0025354,5.74181038 15.5476718,5.30880606 C15.1661854,4.94594647 14.7230304,4.6518259 14.2302421,4.43441003 C13.3726672,4.05646253 12.5732156,4 12.17307,4" fill="#fff" stroke="#000"></path></svg></a>
+            <a href="#" aria-label="Follow us on Instagram"><img src="img/icon-instagram_24.webp" alt="Instagram"/></a>
+            <a href="#" aria-label="Follow us on Linkedin"><svg><path d="M19.668463,3 C20.4024834,3 21,3.581 21,4.298 L21,19.701 C21,20.418 20.4024834,21 19.668463,21 L4.32753688,21 C3.59501653,21 3,20.418 3,19.701 L3,4.298 C3,3.581 3.59501653,3 4.32753688,3 L19.668463,3 Z M7.00411123,5.478 C6.14658741,5.478 5.4550682,6.1715 5.4550682,7.026 C5.4550682,7.881 6.14658741,8.5745 7.00411123,8.5745 C7.85813495,8.5745 8.5511542,7.881 8.5511542,7.026 C8.5511542,6.1715 7.85813495,5.478 7.00411123,5.478 Z M5.66707409,18.338 L8.33964832,18.338 L8.33964832,9.748 L5.66707409,9.748 L5.66707409,18.338 Z M10.0141948,9.748 L10.0141948,18.338 L12.6807689,18.338 L12.6807689,14.0895 C12.6807689,12.9685 12.8927748,11.883 14.2823134,11.883 C15.6523515,11.883 15.6693519,13.1645 15.6693519,14.1605 L15.6693519,18.338 L18.3389261,18.338 L18.3389261,13.627 C18.3389261,11.3135 17.8394122,9.535 15.1358371,9.535 C13.837301,9.535 12.9662768,10.247 12.610267,10.9225 L12.5732659,10.9225 L12.5732659,9.748 L10.0141948,9.748 Z" fill="#007bb5"></path></svg></a>
+            <a href="#" aria-label="Follow us on Pinterest"><svg><path d="M12.0005292,3 C7.03034045,3 3,7.02928206 3,12.0005292 C3,15.6847769 5.21626389,18.8514729 8.3882519,20.2432528 C8.36285059,19.6156289 8.38401835,18.85994 8.54383489,18.1762216 C8.71741048,17.445934 9.70171106,13.2727112 9.70171106,13.2727112 C9.70171106,13.2727112 9.41488799,12.6980067 9.41488799,11.8481214 C9.41488799,10.5145528 10.1885694,9.51860998 11.1506439,9.51860998 C11.9687776,9.51860998 12.3646146,10.1335333 12.3646146,10.8701711 C12.3646146,11.6925384 11.8396543,12.9234433 11.5697654,14.0633269 C11.3443288,15.019051 12.0481566,15.796966 12.9901217,15.796966 C14.6951843,15.796966 15.843535,13.6071618 15.843535,11.0119951 C15.843535,9.04021873 14.5152584,7.56376786 12.0989593,7.56376786 C9.36937732,7.56376786 7.66854824,9.59904745 7.66854824,11.8724643 C7.66854824,12.657788 7.89927677,13.2102664 8.26124537,13.637855 C8.42847063,13.8357735 8.45069677,13.9140942 8.39036867,14.1405892 C8.34803316,14.3046393 8.24854472,14.7047098 8.2072676,14.8624096 C8.1469395,15.089963 7.96278003,15.1725172 7.75745281,15.0878462 C6.49902981,14.5745281 5.9137414,13.1975657 5.9137414,11.6491445 C5.9137414,9.09313812 8.06967719,6.0259305 12.3455636,6.0259305 C15.7821485,6.0259305 18.0439231,8.51420004 18.0439231,11.1823955 C18.0439231,14.7131769 16.0816723,17.3506791 13.1869818,17.3506791 C12.2164403,17.3506791 11.3019933,16.8257188 10.9887105,16.2298465 C10.9887105,16.2298465 10.465867,18.3032281 10.3557947,18.7032986 C10.1652849,19.3965426 9.79167402,20.0908449 9.44981478,20.6306227 C10.2594814,20.8698183 11.1146587,21 12.0005292,21 C16.9707179,21 21,16.9707179 21,12.0005292 C21,7.02928206 16.9707179,3 12.0005292,3" fill="#c92228"></path></svg></a>
         </div>
         <p>© Copyright Gannett 2025</p>
     </div>

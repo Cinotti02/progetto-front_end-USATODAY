@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.toggle('open');
         overlay.style.display = 'block';
         document.body.style.overflow = 'hidden';
+        hamburger.setAttribute('aria-expanded', 'true');
+        mobileMenu.setAttribute("aria-hidden", "false");
     });
 
     closeMenuButton.addEventListener('click', () => {
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.style.display = 'none';
         overlay.style.display = 'none';
         document.body.style.overflow = '';
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute("aria-hidden", "true");
     });
 
     menuItemsWithSubmenu.forEach(item => {

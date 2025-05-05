@@ -1265,10 +1265,10 @@ main {
         flex-wrap: nowrap;
         position: relative;
         flex: 0 0 41.6667%;
-        margin-left: -8.333333%;
+        margin-left: -12%;
         background: #ffffff;
         max-width: 295px;
-        padding: 24px 34px;
+        padding: 24px 20px 24px 34px;
         margin-top: 24px;
         line-height: 1.15;
         flex-direction: column;
@@ -1278,15 +1278,25 @@ main {
 
     .news-principal-title h1 {
         font-family: "Unify Sans", Helvetica, Arial, sans-serif;
-        font-size: 28px;
+        font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1200 - 320)));
         font-weight: 600;
         line-height: 1.15;
         color: #222222;
     }
 
-    @media (max-width: 1200px) {
+    @media (min-width: 1200px) {
         .news-principal-title h1 {
-            font-size: calc(17px + 0.909091vw);
+            font-size: 28px;
+        }
+    }
+    @media (min-width: 960px) and (max-width: 1199px) {
+        .news-principal-title h1 {
+            font-size: 22px;
+        }
+    }
+    @media(max-width: 500px) {
+        .news-secondary-title h1{
+            font-size: calc(14px + 0.909091vw);
         }
     }
 

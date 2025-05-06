@@ -449,6 +449,35 @@ util-sticky-module {
         display: block;
     }
 
+    .container-logo {
+        position: relative;
+        display: flex;
+        height: auto;
+    }
+
+    .img-base {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease;
+        pointer-events: none; /* evita problemi col mouse */
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .container-logo:hover .img-overlay {
+            opacity: 1;
+        }
+    }
+
     .nav-links {
         display: flex;
         flex-wrap: nowrap; /* AGGIUNTO */
@@ -631,7 +660,6 @@ header {
         width: 260px;
         padding-left: 40px;
         flex-direction: column;
-        align-items: start;
         display: flex;
     }
 
@@ -837,17 +865,21 @@ header {
             padding-right: 0;
             margin-bottom: 0;
         }
+        .header-principal{
+            flex-direction: column;
+        }
 
         .header-content {
             flex-basis: 100%;
         }
 
         .header-text h1 {
-            padding-left: 30px;
+            padding-left: 9.33333333%;
+            flex-basis: 91.66666667%;
         }
 
         .header-content p {
-            padding-left: 30px;
+            padding-left: 8.33333333%;
             line-height: 1.3;
             width: 83.33333333%;
             font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
@@ -856,7 +888,15 @@ header {
         }
 
         .secondary-slot {
-            display: none;
+            width: 100%;
+            flex-basis: 100%;
+            padding: 0;
+        }
+        .slot-container {
+            width: auto;
+            margin-left: 8.33333333%;
+            margin-right: 8.33333333%;
+            margin-bottom: 24px;
         }
 
         .advertisement-container {
